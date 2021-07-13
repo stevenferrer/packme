@@ -9,7 +9,7 @@ import (
 func TestItem(t *testing.T) {
 	var l, w, h float32 = 10, 10, 30
 	desc := "Item 1"
-	item1 := NewItem(desc, NewDims(l, w, h))
+	item1 := NewItem(desc, NewDimensions(l, w, h))
 
 	assert.Equal(t, desc, item1.Desc())
 	assert.Equal(t, l, item1.Length())
@@ -20,54 +20,54 @@ func TestItem(t *testing.T) {
 	t.Run("Dimensions by rotation", func(t *testing.T) {
 		t.Run("LWH", func(t *testing.T) {
 			item1.rot = RotationLWH
-			expect := NewDims(l, w, h)
+			expect := NewDimensions(l, w, h)
 			got := item1.Dimensions()
 			assert.Equal(t, expect, got)
 		})
 
 		t.Run("WLH", func(t *testing.T) {
 			item1.rot = RotationWLH
-			expect := NewDims(w, l, h)
+			expect := NewDimensions(w, l, h)
 			got := item1.Dimensions()
 			assert.Equal(t, expect, got)
 		})
 
 		t.Run("WHL", func(t *testing.T) {
 			item1.rot = RotationWHL
-			expect := NewDims(w, h, l)
+			expect := NewDimensions(w, h, l)
 			got := item1.Dimensions()
 			assert.Equal(t, expect, got)
 		})
 
 		t.Run("HLW", func(t *testing.T) {
 			item1.rot = RotationHLW
-			expect := NewDims(h, l, w)
+			expect := NewDimensions(h, l, w)
 			got := item1.Dimensions()
 			assert.Equal(t, expect, got)
 		})
 
 		t.Run("HWL", func(t *testing.T) {
 			item1.rot = RotationHWL
-			expect := NewDims(h, w, l)
+			expect := NewDimensions(h, w, l)
 			got := item1.Dimensions()
 			assert.Equal(t, expect, got)
 		})
 
 		t.Run("LHW", func(t *testing.T) {
 			item1.rot = RotationLHW
-			expect := NewDims(l, h, w)
+			expect := NewDimensions(l, h, w)
 			got := item1.Dimensions()
 			assert.Equal(t, expect, got)
 		})
 	})
 
 	t.Run("Intersect", func(t *testing.T) {
-		item2 := NewItem("Item 2", NewDims(10, 10, 30))
+		item2 := NewItem("Item 2", NewDimensions(10, 10, 30))
 		expect := true
 		got := item1.Collision(item2)
 		assert.Equal(t, expect, got)
 
-		item3 := NewItem("Item 3", NewDims(10, 10, 30))
+		item3 := NewItem("Item 3", NewDimensions(10, 10, 30))
 		item3.pos = NewPoint(10, 0, 0)
 		expect = false
 		got = item1.Collision(item3)

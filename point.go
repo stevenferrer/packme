@@ -24,7 +24,7 @@ func (p Point) String() string {
 	return fmt.Sprintf("%v,%v,%v", p[0], p[1], p[2])
 }
 
-func computePivot(axis Axis, pos Point, dims Dims) Point {
+func computePivot(axis Axis, pos Point, dims Dimensions) Point {
 	// get pivot point
 	var pivot Point
 	switch axis {

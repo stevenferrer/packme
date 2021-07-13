@@ -8,7 +8,7 @@ import (
 
 func TestDimensions(t *testing.T) {
 	var l, w, h float32 = 10, 20, 30
-	dim := NewDims(l, w, h)
+	dim := NewDimensions(l, w, h)
 	assert.Equal(t, l, dim.Length())
 	assert.Equal(t, w, dim.Width())
 	assert.Equal(t, h, dim.Height())

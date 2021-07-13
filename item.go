@@ -14,7 +14,7 @@ type Item struct {
 	pos Point
 }
 
-func NewItem(desc string, dims Dims) *Item {
+func NewItem(desc string, dims Dimensions) *Item {
 	return &Item{
 		desc:   desc,
 		length: dims.Length(),
@@ -47,21 +47,21 @@ func (i *Item) Volume() float32 {
 	return i.length * i.width * i.height
 }
 
-func (i *Item) Dimensions() Dims {
-	var d Dims
+func (i *Item) Dimensions() Dimensions {
+	var d Dimensions
 	switch i.rot {
 	case RotationLWH:
-		d = Dims{i.Length(), i.Width(), i.Height()}
+		d = Dimensions{i.Length(), i.Width(), i.Height()}
 	case RotationWLH:
-		d = Dims{i.Width(), i.Length(), i.Height()}
+		d = Dimensions{i.Width(), i.Length(), i.Height()}
 	case RotationWHL:
-		d = Dims{i.Width(), i.Height(), i.Length()}
+		d = Dimensions{i.Width(), i.Height(), i.Length()}
 	case RotationHLW:
-		d = Dims{i.Height(), i.Length(), i.Width()}
+		d = Dimensions{i.Height(), i.Length(), i.Width()}
 	case RotationHWL:
-		d = Dims{i.Height(), i.Width(), i.Length()}
+		d = Dimensions{i.Height(), i.Width(), i.Length()}
 	case RotationLHW:
-		d = Dims{i.Length(), i.Height(), i.Width()}
+		d = Dimensions{i.Length(), i.Height(), i.Width()}
 	}
 
 	return d

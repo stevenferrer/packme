@@ -4,11 +4,8 @@ import (
 	"sort"
 )
 
-// BestFitPacker is a packer implementation based on a paper by
-// Dube, E. & Kanavathy, L. (2006) titled "Optimizing Three-Dimensional
-// Bin Packing Through Simulation"
-//
-// Refer to https://www.researchgate.net/publication/228974015_Optimizing_Three-Dimensional_Bin_Packing_Through_Simulation
+// BestFitPacker is a packer implementation based on
+// a paper by Dube, E., & Kanavathy, L. (2006)
 type BestFitPacker struct{}
 
 var _ Packer = (*BestFitPacker)(nil)

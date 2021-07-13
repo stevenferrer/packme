@@ -7,11 +7,11 @@ import (
 
 type Box struct {
 	desc  string
-	dims  Dims
+	dims  Dimensions
 	items Items
 }
 
-func NewBox(desc string, dims Dims) *Box {
+func NewBox(desc string, dims Dimensions) *Box {
 	return &Box{
 		desc:  desc,
 		dims:  dims,
@@ -27,7 +27,7 @@ func (bx *Box) Volume() float32 {
 	return bx.dims.Length() * bx.dims.Width() * bx.dims.Height()
 }
 
-func (bx *Box) Dimensions() Dims {
+func (bx *Box) Dimensions() Dimensions {
 	return bx.dims
 }
 

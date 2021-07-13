@@ -3,10 +3,10 @@ package packme
 type ItemSpec struct {
 	desc string
 	qty  int
-	dims Dims
+	dims Dimensions
 }
 
-func NewItemSpec(desc string, qty int, dims Dims) ItemSpec {
+func NewItemSpec(desc string, qty int, dims Dimensions) ItemSpec {
 	return ItemSpec{desc: desc, qty: qty, dims: dims}
 }
 
