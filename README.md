@@ -31,7 +31,6 @@ itemSpecs := []packme.ItemSpec{
     packme.NewItemSpec("Large Item", 1, packme.NewDimensions(50, 50, 100)),
 }
 
-
 // Create new instance of best-fit packer
 packer := packme.NewBestFitPacker()
 
