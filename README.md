@@ -36,6 +36,38 @@ packer := packme.NewBestFitPacker()
 
 // Start packing!
 packingScheme := packer.Pack(boxes, items)
+
+// Print packing scheme
+fmt.Println(packingScheme)
+
+// Output:
+// Box B items(1) dims(5x5x40) vol(1000)
+// Tall Item dims(5x5x39.5) vol(987.5) pos(0,0,0) rot(h,l,w)
+// 
+// Box C items(4) dims(20x20x30) vol(12000)
+// Item A1 dims(10x10x30) vol(3000) pos(0,0,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(10,0,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(0,10,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(10,10,0) rot(l,w,h)
+//
+// Box A items(9) dims(30x30x30) vol(27000)
+// Item A1 dims(10x10x30) vol(3000) pos(0,0,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(10,0,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(20,0,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(0,10,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(10,10,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(20,10,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(0,20,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(10,20,0) rot(l,w,h)
+// Item A1 dims(10x10x30) vol(3000) pos(20,20,0) rot(l,w,h)
+//
+// Not packed (6)
+// Item A1 dims(10x30x10) vol(3000) pos(0,0,0) rot(l,h,w)
+// Item A1 dims(10x30x10) vol(3000) pos(0,0,0) rot(l,h,w)
+// Item A1 dims(10x30x10) vol(3000) pos(0,0,0) rot(l,h,w)
+// Item A1 dims(10x30x10) vol(3000) pos(0,0,0) rot(l,h,w)
+// Item A2 dims(10x30x10) vol(3000) pos(0,0,0) rot(l,h,w)
+// Large Item dims(50x100x50) vol(250000) pos(0,0,0) rot(l,h,w)
 ```
 
 ## Credits
