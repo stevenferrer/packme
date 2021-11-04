@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/sf9v/packme"
+	"github.com/stevenferrer/packme"
 )
 
 func TestBestFitPacker(t *testing.T) {

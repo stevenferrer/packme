@@ -1,7 +1,7 @@
-[![GoDoc Reference](https://pkg.go.dev/badge/github.com/sf9v/packme)](https://pkg.go.dev/github.com/sf9v/packme)
-![Github Actions](https://github.com/sf9v/packme/workflows/test/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/sf9v/packme/badge.svg?branch=main)](https://coveralls.io/github/sf9v/packme?branch=main)
-[![Go Report Card](https://goreportcard.com/badge/github.com/sf9v/packme)](https://goreportcard.com/report/github.com/sf9v/packme)
+[![GoDoc Reference](https://pkg.go.dev/badge/github.com/stevenferrer/packme)](https://pkg.go.dev/github.com/stevenferrer/packme)
+![Github Actions](https://github.com/stevenferrer/packme/workflows/test/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/stevenferrer/packme/badge.svg?branch=main)](https://coveralls.io/github/stevenferrer/packme?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/stevenferrer/packme)](https://goreportcard.com/report/github.com/stevenferrer/packme)
 
 # PackMe
 
